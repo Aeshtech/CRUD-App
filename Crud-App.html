@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Record Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myapp.js"></script>
+</head>
+
+<body>
+    <nav id="nav">
+        <h1>Student Record Manager</h1>
+    </nav>
+
+    <div id="container">
+        <div class="form-div col-1">
+            <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                <div>
+                    <label>Full Name</label><label class="validation-error hide" id="fullNameError">This field is required.</label>
+                    <input type="text" name="fullName" id="fullName">
+                </div>
+                <div> 
+                    <label>Roll No</label><label class="validation-error hide" id="regnoError">This field is required.</label>
+                    <input type="text" name="empCode" id="empCode">
+                </div>
+                <div> 
+                    <label>Phone No</label><label class="validation-error hide" id="phoneError">This field is required.</label>
+                    <input type="text" name="phone" id="phone">
+                </div>
+                <div>
+                    <label>Course</label><label class="validation-error hide" id="courseError">This field is required.</label>
+                    <select name="course" id="course">
+                        <option value="" selected disabled>Select</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="B.Pharma">B.Pharma</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BBA">BBA</option>
+                        <option value="MBA">MBA</option>
+                    </select>
+                </div>
+                <div> 
+                    <label>Semester</label><label class="validation-error hide" id="semesterError">This field is required.</label>
+                    <input type="text" name="semester" id="semester">
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+
+            <br>            
+            <h2 style="color: blueviolet;margin: 10vh 2em 0;">Dev by - <a href="https://Aeshtech.com" alt="Aeshtech" title="Aeshtech">Aeshtech</a></h2>
+        </div>
+
+        
+        <div class="table-div col-3">
+            <input type="button" id="deleteall" value="Delete All Record" onclick="DeleteRows()">
+            <div class="list" id="facultyList">
+                <div style="overflow:auto;white-space:nowrap;">
+                    <table class="list" id="employeeList">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Roll No</th>
+                                <th>Phone No</th>
+                                <th>Course</th>
+                                <th>Semester</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody> </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
